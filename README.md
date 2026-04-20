@@ -2,6 +2,19 @@
 
 A full-stack Task Manager application with JWT authentication, user-isolated task CRUD, pagination/filtering, and a plain HTML/CSS/JavaScript frontend.
 
+## Live Links
+
+- Frontend (Vercel): [https://task-manager-fastapi-lac.vercel.app/](https://task-manager-fastapi-lac.vercel.app/)
+- Backend API (Render): [https://task-manager-fastapi-kdle.onrender.com/](https://task-manager-fastapi-kdle.onrender.com/)
+
+## Tech Stack
+
+- Backend: FastAPI, SQLAlchemy, Pydantic, python-jose (JWT), passlib (bcrypt)
+- Database: SQLite (default via `DATABASE_URL`)
+- Frontend: HTML, CSS, Vanilla JavaScript
+- Testing: pytest, FastAPI TestClient
+- Deployment: Render (API), Vercel (Frontend), Docker
+
 ## Project Structure
 
 ```
