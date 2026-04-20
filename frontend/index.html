@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <header class="page-header">
+        <h1>Task Manager</h1>
+        <p>Organize your work with a simple, clean flow.</p>
+      </header>
+
+      <div id="message" class="alert hidden"></div>
+
+      <section id="auth-section" class="auth-wrapper">
+        <article class="card auth-card">
+          <div class="auth-tabs">
+            <button id="show-login-tab" class="auth-tab active" type="button">Login</button>
+            <button id="show-register-tab" class="auth-tab" type="button">Register</button>
+          </div>
+
+          <div id="login-panel" class="auth-panel">
+            <h2>Login</h2>
+            <form id="login-form">
+              <input id="login-email" type="email" placeholder="Email" required />
+              <input id="login-password" type="password" placeholder="Password" required />
+              <button id="login-btn" type="submit">Login</button>
+            </form>
+          </div>
+
+          <div id="register-panel" class="auth-panel hidden">
+            <h2>Register</h2>
+            <form id="register-form">
+              <input id="register-username" type="text" placeholder="Username" required />
+              <input id="register-email" type="email" placeholder="Email" required />
+              <input id="register-password" type="password" placeholder="Password" required />
+              <button id="register-btn" type="submit">Register</button>
+            </form>
+          </div>
+        </article>
+      </section>
+
+      <section id="task-section" class="card hidden">
+        <div class="row space-between task-header">
+          <div>
+            <h2>Your Tasks</h2>
+            <p id="logged-in-user" class="muted"></p>
+          </div>
+          <button id="logout-btn" class="secondary" type="button">Logout</button>
+        </div>
+
+        <form id="task-form" class="task-form">
+          <input id="task-title" type="text" placeholder="Task title" required />
+          <input id="task-description" type="text" placeholder="Task description (optional)" />
+          <button id="add-task-btn" type="submit">Add Task</button>
+        </form>
+
+        <div class="row filter-row">
+          <label for="filter-completed">Filter status</label>
+          <select id="filter-completed">
+            <option value="">All</option>
+            <option value="true">Completed</option>
+            <option value="false">Pending</option>
+          </select>
+        </div>
+
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
