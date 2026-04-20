@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://your-backend-url.onrender.com";
+const API_BASE_URL = "https://task-manager-fastapi-kdle.onrender.com";
 
 const authSection = document.getElementById("auth-section");
 const taskSection = document.getElementById("task-section");
